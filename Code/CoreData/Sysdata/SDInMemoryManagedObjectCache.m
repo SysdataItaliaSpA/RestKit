@@ -8,6 +8,7 @@
 
 #import "SDInMemoryManagedObjectCache.h"
 #import "SDEntityCache.h"
+#import "RKLog.h"
 #import "RKEntityByAttributeCache.h"
 
 // Set Logging Component
