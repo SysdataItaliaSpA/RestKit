@@ -37,4 +37,6 @@
  */
 - (id)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
+- (void)flush:(void (^)(void))completion;
+
 @end

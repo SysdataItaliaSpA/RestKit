@@ -161,4 +161,10 @@ static dispatch_queue_t RKInMemoryManagedObjectCacheCallbackQueue(void)
     [self.entityCache removeObjects:deletedObjects completion:nil];
 }
 
+- (void)flush:(void (^)(void))completion
+{
+    [self.entityCache flush:completion];
+    self.entityCache = nil;
+}
+
 @end
