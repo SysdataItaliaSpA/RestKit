@@ -160,7 +160,7 @@ static NSDictionary *RKConnectionAttributeValuesWithObject(RKConnectionDescripti
     if ([connection isForeignKeyConnection]) {
         NSDictionary *attributeValues = RKConnectionAttributeValuesWithObject(connection, self.managedObject);
         // If there are no attribute values available for connecting, skip the connection entirely
-        if (! attributeValues) {
+        if (! attributeValues || attributeValues.count == 0) {
             *shouldConnectRelationship = NO;
             return nil;
         }
